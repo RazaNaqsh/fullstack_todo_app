@@ -2,7 +2,7 @@ import express from "express";
 import dotenv from "dotenv";
 import mongoose from "mongoose";
 
-import tasksRoute from "./routes/tasksRoute";
+import tasksRoute from "./routes/tasksRoute.js";
 
 dotenv.config();
 const port = process.env.PORT || 5000;

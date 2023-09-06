@@ -1,6 +1,6 @@
 import mongoose from "mongoose";
 import express from "express";
-import TaskModel from "../models/taskModel";
+import TaskModel from "../models/taskModel.js";
 
 export const getTasks = async (req, res) => {
   try {
