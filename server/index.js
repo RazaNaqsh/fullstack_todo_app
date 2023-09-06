@@ -2,6 +2,8 @@ import express from "express";
 import dotenv from "dotenv";
 import mongoose from "mongoose";
 
+import tasksRoute from "./routes/tasksRoute";
+
 dotenv.config();
 const port = process.env.PORT || 5000;
 
@@ -11,6 +13,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 app.get("/", (req, res) => res.send("Api running"));
+app.get("/tasks", tasksRoute);
 
 mongoose.connect(process.env.MONGO_URL).then(() => {
   app.listen(process.env.PORT || port, () =>
