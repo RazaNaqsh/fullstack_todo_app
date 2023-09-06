@@ -8,7 +8,7 @@ const taskSchema = mongoose.Schema({
   isImportant: Boolean,
   createdAt: {
     type: Date,
-    default: new Data(),
+    default: new Date(),
   },
 });
 
