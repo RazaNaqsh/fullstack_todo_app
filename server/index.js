@@ -12,8 +12,7 @@ const app = express();
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-app.get("/", (req, res) => res.send("Api running"));
-app.get("/tasks", tasksRoute);
+app.use("/tasks", tasksRoute);
 
 mongoose.connect(process.env.MONGO_URL).then(() => {
   app.listen(process.env.PORT || port, () =>
