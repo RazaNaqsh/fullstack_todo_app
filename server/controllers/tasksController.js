@@ -12,6 +12,11 @@ export const getTasks = async (req, res) => {
   }
 };
 
+export const getTask = async (req, res) => {
+  try {
+  } catch (err) {}
+};
+
 export const createTask = async (req, res) => {
   const task = req.body;
 
@@ -22,4 +27,14 @@ export const createTask = async (req, res) => {
   } catch (err) {
     res.status(404).json({ message: err.message });
   }
+};
+
+export const deleteTask = async (req, res) => {
+  try {
+  } catch (err) {}
+};
+
+export const updateTask = async (req, res) => {
+  try {
+  } catch (err) {}
 };
