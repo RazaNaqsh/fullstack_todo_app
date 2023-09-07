@@ -58,7 +58,9 @@ export const updateTask = async (req, res) => {
     return res.status(404).send(`No task with id:${id}`);
   }
 
-  await TaskModel.findByIdAndUpdate(id, task, { new: true });
+  const updatedTask = await TaskModel.findByIdAndUpdate(id, task, {
+    new: true,
+  });
 
-  return res.json(task);
+  return res.json(updatedTask);
 };
